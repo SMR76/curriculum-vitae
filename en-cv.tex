@@ -1,0 +1,156 @@
+% !TeX spellcheck = en_US
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{color}
+\usepackage{xparse}
+\usepackage{fourier}
+\usepackage{amsmath}
+\usepackage{dirtree}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{outlines}
+\usepackage{enumitem}
+\usepackage{geometry}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{transparent}
+\usepackage{indentfirst}
+\usepackage{transparent}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+\usepackage{datenumber,fp}
+\usepackage{lstautogobble}
+\usepackage[none]{hyphenat}
+\usepackage[explicit]{titlesec}
+\usepackage[breakable]{tcolorbox}
+\usepackage[font=footnotesize]{caption}
+\usepackage[colorlinks,linkcolor=blue,citecolor=red,urlcolor=gray]{hyperref}
+\tcbuselibrary{breakable, skins}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+
+%% ------------ font settings -------------
+%\fontspec[ Path = ./fonts/ ]{icofont.ttf}
+%\newfontfamily\icofont{IcoFont}
+\setmainfont{Consolas}
+
+%% ----------- helper command -------------
+
+\newcommand{\lrm}[1]{\textcolor{steelBlue}{\texttt{#1}}}
+
+\newcommand{\qt}[1]{``#1''}
+
+\definecolor{ao}				{rgb}{0.00, 0.50, 0.00}
+\definecolor{codeGreen}			{rgb}{0.00, 0.70, 0.50}
+\definecolor{lavendergray}		{rgb}{0.87, 0.86, 0.92}
+\definecolor{mint}				{rgb}{0.24, 0.71, 0.54}
+\definecolor{aliceblue}			{rgb}{0.94, 0.97, 1.00}
+\definecolor{customCommentGreen}{rgb}{0.13, 0.65, 0.47}
+\definecolor{steelBlue}			{rgb}{0.00, 0.00, 0.50}
+\definecolor{blueLink}			{rgb}{0.10, 0.05, 0.67}
+\definecolor{stringGreen}		{rgb}{0, 0.5, 0}
+
+\definecolor{twitter}			{rgb}{0.11, 0.63, 0.95}
+\definecolor{linkedin}			{rgb}{0.00, 0.47, 0.71}
+\definecolor{telegram}			{rgb}{0.15, 0.62, 0.85}
+\definecolor{gmail}				{rgb}{0.87, 0.33, 0.28}
+
+\DeclareCaptionFormat{listing}{\vskip1pt#1#2#3}
+\captionsetup[lstlisting]{format=listing,singlelinecheck=false, margin=0pt, font={sf},labelsep=space,labelfont ={sf}}
+\renewcommand\lstlistingname{snippet code}
+
+\setlength{\headheight}{12pt}
+
+\fancypagestyle{plain}{%
+	\fancyhf{}%
+	\renewcommand{\headrulewidth}{0pt}%
+	\lhead{{\small\color{gray} S.M.R }}
+	\rhead{
+		{\hypersetup{urlcolor=black}\hyperref{https://github.com/SMR76}{}{}{\faGithub}}
+		{\hypersetup{urlcolor=twitter}\hyperref{https://twitter.com/S\_M\_R\_67}{}{}{\faTwitter}}
+		{\hypersetup{urlcolor=linkedin}\hyperref{https://www.linkedin.com/in/seyyed-morteza-razavi-403b2a196/}{}{}{\faLinkedin}}
+		{\hypersetup{urlcolor=Magenta}\hyperref{https://www.instagram.com/s\_m\_r76/}{}{}{\faInstagram}}
+		{\hypersetup{urlcolor=telegram}\hyperref{tg://resolve?domain=S\_M\_R0}{}{}{\faSendO}}
+		{\hypersetup{urlcolor=gmail}\hyperref{mailto:seyyedmortezarazavi76@gmail.com}{}{}{\faAt}}
+	}
+}
+
+\pagestyle{plain}
+
+\begin{document}
+	\lstset{
+		frame=tb,
+		basicstyle=\color{steelBlue}\linespread{0.8}\ttfamily,
+		columns=fullflexible,
+		keepspaces=false,
+		tabsize=4,
+		autogobble,
+		breaklines=true,
+		breakatwhitespace=true,
+		stringstyle=\color{orange},
+		commentstyle=\color{gray},
+		keywordstyle=\color{purple},
+		language=java,
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		captionpos=b,
+		numbers=left,
+		numbersep=5pt,
+		numberstyle=\color{gray}\linespread{0.8}\ttfamily,
+		postbreak=\mbox{\textcolor{blue}{$\hookrightarrow$}\space}
+	}
+
+	\hypersetup{urlcolor=blueLink}
+
+	\newcounter{dateone}%
+	\newcounter{datetwo}%
+	\setmydatenumber{dateone}{1997}{11}{11}%
+	\setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
+	\FPeval\myage{trunc(div(sub(\thedatetwo,\thedateone),365.2425),0)}
+
+	\noindent Hi, my name is Seyyed Morteza Razavi.			\\
+	I'm \myage\ years old.				\\
+	I have a Bachelor's degree from
+	\hyperref{https://fa.wikipedia.org/wiki/دانشگاه\_صنعتی\_قوچان}{}{}{Quchan university of technology}.						\\
+	I have experience with Qt, C++, and QML programming.	\\
+	I love painting and UI designing.						\\
+	\noindent\textcolor{gray}{\rule{\linewidth}{1pt}}
+	I'm also familiar with the following topics:			\vspace{5mm}
+
+	\begin{itemize}[nosep]
+		\item Git version control.
+		\item GitHub CI/CD (just
+			\hyperref{https://github.com/SMR76/github-action-test}{}{}{this} little GitHub workflow for Qt Windows build).
+		\item Linux (my main OS is Windows, but I like to use Linux distributions too).
+		\item \LaTeX.
+		\item JavaScript and JQuery, as used in my \hyperref{https://github.com/SMR76/SMR76.github.io}{}{}{website}.
+		\item And a little experience in CSS and Bootstrap.
+		\item Arduino programming.
+		\item ARM programming (currently learning).
+	\end{itemize}\vspace{5mm}
+	\noindent\textcolor{gray}{\rule{\linewidth}{1pt}}
+	\noindent Some of the projects which I developed:\vspace{5mm}
+	\begin{itemize}[nosep]
+		\item \hyperref{https://github.com/SMR76/qml-neumorphism}{}{}{qml-neumorphism},
+		QtQuick Neumorphism (soft UI) style for Qt applications.
+		\item \hyperref{https://github.com/SMR76/smr-wp-plugin}{}{}{smr-wp-plugin}, all in one WordPress plugin.
+		\item \hyperref{https://github.com/SMR76/car-alarm}{}{}{car-alarm},
+		this project is based on designing hardware that installs in your car and helps to protect the vehicle against thieves and have better control over it.
+		\item \hyperref{https://github.com/SMR76/adobe-connect-offline-player}{}{}{adobe-connect-offline-player},
+				a video player which plays adobe connect record packages.
+		\item \hyperref{https://github.com/SMR76/persian-subtitle-fixer}{}{}{persian-subtitle-fixer}.
+	\end{itemize}\vspace{5mm}
+	See my other projects on \hyperref{https://github.com/SMR76?tab=repositories}{}{}{GitHub}.\\
+	Contact me:
+	\begin{itemize}[nosep]
+		\item \textcolor{gmail}{\faAt}\ Gmail: \hyperref{mailto:seyyedmortezarazavi76@gmail.com} {}{}{seyyedmortezarazavi76@gmail.com}
+		\item \textcolor{telegram}{\faSendO}\ telegram: \hyperref{tg://resolve?domain=S\_M\_R0}{}{}{\faAt S\_M\_R0}
+		\item \textcolor{black}{\faGithub}\ my website: \hyperref{https://SMR76.github.io/#contactMe}{}{}{SMR76.github.io}
+	\end{itemize}
+\end{document}
