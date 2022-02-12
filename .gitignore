@@ -14,3 +14,4 @@
 *.gz
 *.fdb_latexmk
 *.sync*
+.vscode/*

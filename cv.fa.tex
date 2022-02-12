@@ -1,0 +1,125 @@
+% !TeX spellcheck = <none>
+
+\input{preamble.tex}
+
+
+% xepersian configuration.
+\usepackage{xepersian}
+
+\settextfont{Yas}
+\setlatintextfont{XB Yas}
+
+\begin{document}
+	\lstset{
+		frame=tb,
+		basicstyle=\color{steelBlue}\linespread{0.8}\ttfamily,
+		columns=fullflexible,
+		keepspaces=false,
+		tabsize=4,
+		autogobble,
+		breaklines=true,
+		breakatwhitespace=true,
+		stringstyle=\color{orange},
+		commentstyle=\color{gray},
+		keywordstyle=\color{purple},
+		language=java,
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		captionpos=b,
+		numbers=left,
+		numbersep=5pt,
+		numberstyle=\color{gray}\linespread{0.8}\ttfamily,
+		postbreak=\mbox{\textcolor{blue}{$\hookrightarrow$}\space}
+	}
+
+	\hypersetup{urlcolor=blueLink}
+
+	\newcounter{dateone}%
+	\newcounter{datetwo}%
+	\setmydatenumber{dateone}{1997}{11}{11}%
+	\setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
+	\FPeval\myage{trunc(div(sub(\thedatetwo,\thedateone),365.2425),0)}
+
+	\noindent
+	سلام؛\\
+	سید مرتضیٰ رضوی هستم،
+	\myage
+	ساله.\\
+	برخی از تجارب من شامل برنامه‌نویسی
+	\lr{QML}
+	و
+	\lr{C++}
+	هستند.\\
+	و من همچنین به طراحی رابط کاربری نیز علاقه دارم.\\
+	\noindent\textcolor{gray}{\rule{\linewidth}{1pt}}
+	و آشنایی نسبی نسبت به موضوعات زیر دارم:
+	\vspace{5mm}
+
+	\begin{itemize}[nosep]
+		\item
+		کنترل نسخهٔ
+		 \lr{Git}.
+		\item \lr{GitHub Workflow}
+		(فقط در
+			\hyperref{https://github.com/SMR76/github-action-test}{}{}{این}
+		پروژه، برای امتحان).
+		\item \lr{Linux}.
+		\item
+		برنامه‌نویسی
+		\lr{Arduino}.
+		\item
+		برنامه‌نویسی
+		\lr{ARM}
+		(در حال یادگیری).
+		\item \LaTeX.
+		\item
+		اندکی
+		\lr{JavaScript}
+		و کتاب‌خانهٔ
+		\lr{JQuery}
+		مانند
+		\hyperref{https://github.com/SMR76/SMR76.github.io}{}{}{
+		این وبسایت}.
+		\item
+		همچنین تجربهٔ‌بسیار اندک در
+		\lr{CSS}
+		و
+		‌\lr{Bootstrap}.
+	\end{itemize}\vspace{5mm}
+	\noindent\textcolor{gray}{\rule{\linewidth}{1pt}}
+	\noindent
+	برخی از پروژه‌های من شامل:
+	\vspace{5mm}
+	\begin{itemize}[nosep]
+		\item \hyperref{https://github.com/SMR76/knight-pen}{}{}{\lr{knight-pen}}،
+		یک برنامه‌ٔ ساده برای حاشیه‌نویسی صفحه نمایش.
+		\item \hyperref{https://github.com/SMR76/qml-neumorphism}{}{}{\lr{qml-neumorphism}}،
+		یک مجموعه
+		\lr{Componnent}
+		در سبک
+		\lr{Neumorphism}
+		برای
+		\lr{QML}.
+		\item \hyperref{https://github.com/SMR76/smr-wp-plugin}{}{}{\lr{smr-wp-plugin}}،
+		یک پلاگین وردپرس ساده و چندکاره.
+		\item \hyperref{https://github.com/SMR76/car-alarm}{}{}{car-alarm}،
+		دزدگیر ماشین.
+	\end{itemize}\vspace{5mm}
+	همچنین مابقی پروژه‌های من در
+	\hyperref{https://github.com/SMR76?tab=repositories}{}{}{\lr{GitHub}}
+	قابل مشاهده هستند.\\[5mm]
+	راه‌های تماس با من:
+	\begin{itemize}[nosep]
+		\item \textcolor{gmail}{\faAt}\
+		پست الکترونیک:
+		\hyperref{mailto:seyyedmortezarazavi76@gmail.com} {}{}{\lr{seyyedmortezarazavi76@gmail.com}}
+		\item \textcolor{telegram}{\faSendO}\
+		تلگرام:
+		\hyperref{tg://resolve?domain=S\_M\_R0}{}{}{\lr{@S\_M\_R0}}
+		\item \textcolor{black}{\faGithub}\
+		وبسایت بنده:
+		\hyperref{https://SMR76.github.io/#contactMe}{}{}{\lr{smr76.github.io}}
+	\end{itemize}
+\end{document}
